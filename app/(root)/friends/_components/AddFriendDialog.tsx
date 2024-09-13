@@ -41,7 +41,7 @@ const addFriendFormSchema = z.object({
         .email("Please enter a valid email"),
 });
 
-const AddFriendDialog = (props: Props) => {
+const AddFriendDialog = () => {
     const { mutate: createRequest, pending } = useMutationState(api.request.create);
 
     const form = useForm<z.infer<typeof addFriendFormSchema>>({
